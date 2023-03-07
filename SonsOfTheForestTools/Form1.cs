@@ -576,15 +576,16 @@ namespace SonsOfTheForestTools
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //
+            // Form Load
             listView1.Items.Clear();
             listView2.Items.Clear();
 
+            // Read all SaveGames into the ListView
             readSaveGame();
+            // Sort Listview by "Savegame Date & Time" at startup, so the last Savegame is always the "frst" one in the Listview
             sortListViewColumnOnStart(listView1, 1);
             
             radioButton1.Checked = true;
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
